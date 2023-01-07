@@ -6,10 +6,10 @@ public class playermovements : MonoBehaviour
 {
     public CharacterController contrlr;
     public float speed = 12f;
-    public float gravity = 9.81f;
+    public float gravity = 10f;
 
     public Transform groundcheck;
-    public float grounddistance;
+    public float grounddistance = 0.4f;
     public LayerMask groundmask;
 
     Vector3 velocity;
@@ -33,7 +33,12 @@ public class playermovements : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * y;
         contrlr.Move(move * speed * Time.deltaTime);
 
-        velocity.y -= gravity * Time.deltaTime;
+        if(Input.GetButtonDown("Jump") && isgrounded)
+        {
+            velocity.y += 2.5f;
+        }
+
+        velocity.y -= gravity * Time.deltaTime*0.8f;
         contrlr.Move(velocity * speed * Time.deltaTime);
 
 
