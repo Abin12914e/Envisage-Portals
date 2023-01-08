@@ -9,7 +9,7 @@ public class playermovements : MonoBehaviour
     public float gravity = 10f;
 
     public Transform groundcheck;
-    public float grounddistance = 0.4f;
+    public float grounddistance = 0.0000001f;
     public LayerMask groundmask;
 
     Vector3 velocity;
@@ -24,7 +24,7 @@ public class playermovements : MonoBehaviour
 
         if (isgrounded && velocity.y < 0)
         {
-            velocity.y = -0.1f;
+            velocity.y = -0.5f;
         }
 
         float x = Input.GetAxis("Horizontal");
