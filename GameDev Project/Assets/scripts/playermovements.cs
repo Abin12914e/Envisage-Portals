@@ -9,7 +9,7 @@ public class playermovements : MonoBehaviour
     public float gravity = 10f;
 
     public Transform groundcheck;
-    public float grounddistance = 0.0000001f;
+    public float grounddistance = 0.1f;
     public LayerMask groundmask;
 
     Vector3 velocity;
