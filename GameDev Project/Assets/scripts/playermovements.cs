@@ -35,7 +35,7 @@ public class playermovements : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && isgrounded)
         {
-            velocity.y += 2.5f;
+            velocity.y += 1.5f;
         }
 
         velocity.y -= gravity * Time.deltaTime*0.8f;
