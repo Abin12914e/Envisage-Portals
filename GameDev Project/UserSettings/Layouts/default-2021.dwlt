@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 45
+  controlID: 75
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 46
+  controlID: 76
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 47
+  controlID: 77
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -382,7 +382,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 24.8}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -563,9 +563,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.4204364, y: 18.47768, z: -31.339218}
+    m_Target: {x: -33.817436, y: -15.297154, z: -104.7644}
     speed: 2
-    m_Value: {x: -1.4204364, y: 18.47768, z: -31.339218}
+    m_Value: {x: -33.817436, y: -15.297154, z: -104.7644}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -612,13 +612,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.11312128, y: 0.7311989, z: -0.1251364, w: -0.66098076}
+    m_Target: {x: -0.28441423, y: 0.6495647, z: -0.2868105, w: -0.64413834}
     speed: 2
-    m_Value: {x: -0.113121115, y: 0.73119783, z: -0.12513623, w: -0.6609798}
+    m_Value: {x: -0.2844142, y: 0.6495646, z: -0.28681046, w: -0.6441383}
   m_Size:
-    m_Target: 14.296037
+    m_Target: 20.00109
     speed: 2
-    m_Value: 14.296037
+    m_Value: 20.00109
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -673,10 +673,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: c8deffff36fbffff
+      scrollPos: {x: 0, y: 1225.2}
+      m_SelectedIDs: 8ef2feff
+      m_LastClickedID: -68978
+      m_ExpandedIDs: 82f2feff40f5feff160dffffc0a1ffffb2b1ffffc6b2ffff1ad0ffff48d1ffff7a9e000056ac0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -833,22 +833,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/materials
+    - Assets/SciFi_Door/Script
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/materials
+  - Assets/SciFi_Door/Script
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\github projects\Envisage-Portals\GameDev Project
+  m_LastProjectPath: D:\github backup\Envisage-Portals 2\GameDev Project 2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fa6f0000
-    m_LastClickedID: 28666
-    m_ExpandedIDs: 00000000ea6f000000ca9a3b
+    scrollPos: {x: 0, y: 71}
+    m_SelectedIDs: 2e9b0000
+    m_LastClickedID: 39726
+    m_ExpandedIDs: 000000008c830000189b00001e9b0000309b00003a9b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -876,7 +876,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ea6f0000
+    m_ExpandedIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -903,7 +903,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -967,7 +967,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 353.6001
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
