@@ -21,10 +21,10 @@ public class mousemovements : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * mousesensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mousesensitivity * Time.deltaTime;
         xrot -= mouseY;
-        xrot = Mathf.Clamp(xrot, -30f, 30f);
-        transform.localRotation = Quaternion.Euler(xrot*3, mouseX, 0f);
+        xrot = Mathf.Clamp(xrot, -11.25f, 11.25f);
+        transform.localRotation = Quaternion.Euler(xrot*8, mouseX, 0f);
 
-        playerbody.Rotate(Vector3.up * mouseX*3);
+        playerbody.Rotate(Vector3.up * mouseX*8);
 
 
     }
