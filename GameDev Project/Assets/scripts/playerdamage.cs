@@ -35,7 +35,7 @@ public class playerdamage : MonoBehaviour
             cooldown= 0.1f;
             if (distance < 3)
             {
-                takedamage(10);
+                takedamage(1);
 
             }
         }
