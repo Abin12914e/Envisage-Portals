@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
+
 public class playerdamage : MonoBehaviour
 {
     public int currenthealth;
@@ -9,6 +12,7 @@ public class playerdamage : MonoBehaviour
     public Transform enemy;
     public healthbar healthbar;
     public float cooldown;
+    public int keys;
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +35,13 @@ public class playerdamage : MonoBehaviour
             cooldown= 0.1f;
             if (distance < 3)
             {
-                takedamage(1);
+                takedamage(10);
 
             }
+        }
+        if(currenthealth<=1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 

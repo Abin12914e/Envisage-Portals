@@ -13,8 +13,8 @@ public class playermovements : MonoBehaviour
     public Transform groundcheck;
     public float grounddistance = 0.1f;
     public LayerMask groundmask;
-    public int keys = 0;
-    public string ini = "keys - ";
+    public static int keys = 0;
+    public string ini = "KEYS - ";
     public string fin = "/36";
 
     public Text score;
