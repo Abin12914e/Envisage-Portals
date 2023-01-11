@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class playermovements : MonoBehaviour
 {
@@ -11,6 +13,11 @@ public class playermovements : MonoBehaviour
     public Transform groundcheck;
     public float grounddistance = 0.1f;
     public LayerMask groundmask;
+    public int keys = 0;
+    public string ini = "keys - ";
+    public string fin = "/36";
+
+    public Text score;
 
     Vector3 velocity;
     bool isgrounded;
@@ -43,5 +50,14 @@ public class playermovements : MonoBehaviour
 
 
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 7)
+        {
+            Destroy(other.gameObject);
+            keys += 1;
+            score.text = ini + keys.ToString() + fin;
+        }
     }
 }
