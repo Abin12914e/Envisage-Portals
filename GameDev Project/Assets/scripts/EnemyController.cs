@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
 
     Transform target;
     NavMeshAgent agent;
+    private float cooldown = 4f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,19 +22,25 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(target.position, transform.position);
-        if (distance <= lookRadius)
+        if (cooldown > 0)
         {
-            agent.SetDestination(target.position);
-
-            if(distance <= agent.stoppingDistance)
+            cooldown -= Time.deltaTime;
+        }
+        if (cooldown <= 0)
+        {
+            float distance = Vector3.Distance(target.position, transform.position);
+            if (distance <= lookRadius)
             {
-                //Attack the target
-                FaceTarget();
+                agent.SetDestination(target.position);
+
+                if (distance <= agent.stoppingDistance)
+                {
+                    //Attack the target
+                    FaceTarget();
+                }
             }
         }
     }
-
     void FaceTarget()
     {
         Vector3 direction = (target.position - transform.position).normalized;
