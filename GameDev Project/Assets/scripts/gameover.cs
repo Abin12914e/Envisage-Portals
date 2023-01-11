@@ -11,9 +11,15 @@ public class gameover : MonoBehaviour
     void Update()
     {
         score1.text = playermovements.keys.ToString();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
     public void quitgame()
     {
         Application.Quit();
+
+
     }
 }
