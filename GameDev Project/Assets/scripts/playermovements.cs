@@ -48,16 +48,25 @@ public class playermovements : MonoBehaviour
         velocity.y -= gravity * Time.deltaTime*0.8f;
         contrlr.Move(velocity * speed * Time.deltaTime);
 
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = 20f;
+            speed = 18f;
         }
         else
         {
             speed = 12f;
         }
 
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
 
+            energyBar.instance.useStamina(5);
+        }
+            
+
+
+        
 
     }
     private void OnTriggerEnter(Collider other)
