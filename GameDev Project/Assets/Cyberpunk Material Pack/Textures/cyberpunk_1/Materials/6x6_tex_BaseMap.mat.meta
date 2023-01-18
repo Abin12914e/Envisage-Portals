@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:GameDev Project/Assets/Cyberpunk Material Pack/Textures/cyberpunk_1/Materials/6x6_tex_BaseMap.mat.meta
 guid: c034ed8f76235f24f86398f2ce6ed9ca
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
+========
+guid: 4cadb7bd5976f5b4e82b0960523eadb5
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>>> ddbffa5ec36f14a7db0234b5afcf841b844e2039:GameDev Project/Assets/CasualGameSounds.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

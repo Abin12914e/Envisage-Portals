@@ -14,7 +14,7 @@ public class closeddoor : MonoBehaviour
         {
 
             once = false;
-
+            
             Destroy(indicator1);
         }
     }
