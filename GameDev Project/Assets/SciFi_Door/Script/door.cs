@@ -14,6 +14,7 @@ public class door : MonoBehaviour {
             
             thedoor1.GetComponent<Animation>().Play("open");
             once= false;
+            FindObjectOfType<audiomanager>().play("door");
 
             Destroy(indicator1);
         }

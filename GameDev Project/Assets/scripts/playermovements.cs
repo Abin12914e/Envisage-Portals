@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
@@ -17,6 +18,9 @@ public class playermovements : MonoBehaviour
     public string ini = "KEYS - ";
     public string fin = "/36";
 
+    public float timer=3f;
+    public bool sou=true;
+
     public Text score;
 
     Vector3 velocity;
@@ -27,6 +31,7 @@ public class playermovements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         isgrounded = Physics.CheckSphere(groundcheck.position, grounddistance, groundmask);
 
         if (isgrounded && velocity.y < 0)
@@ -47,9 +52,38 @@ public class playermovements : MonoBehaviour
 
         velocity.y -= gravity * Time.deltaTime*0.8f;
         contrlr.Move(velocity * speed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.W ) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            timer += Time.deltaTime;
+            if (timer > 0.4f && sou)
+            {
+
+                FindObjectOfType<audiomanager>().play("walka1");
+                FindObjectOfType<audiomanager>().play("walka2");
+                FindObjectOfType<audiomanager>().play("walka3");
+                FindObjectOfType<audiomanager>().play("walka4");
+                FindObjectOfType<audiomanager>().play("walka5");
+                FindObjectOfType<audiomanager>().play("walka6");
+                sou = false;
+                
+            }
+            if (timer > 0.8f)
+            {
+
+                FindObjectOfType<audiomanager>().play("walk1");
+                FindObjectOfType<audiomanager>().play("walk2");
+                FindObjectOfType<audiomanager>().play("walk3");
+                FindObjectOfType<audiomanager>().play("walk4");
+                FindObjectOfType<audiomanager>().play("walk5");
+                FindObjectOfType<audiomanager>().play("walk6");
+
+                sou = true;
+                timer= 0;
+            }
+        }
 
 
-        if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = 18f;
         }
@@ -68,8 +102,10 @@ public class playermovements : MonoBehaviour
     {
         if (other.gameObject.layer == 7)
         {
+            FindObjectOfType<audiomanager>().play("obtain");
             Destroy(other.gameObject);
             keys += 1;
+            
             score.text = ini + keys.ToString() + fin;
         }
     }
