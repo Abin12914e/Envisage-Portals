@@ -58,11 +58,6 @@ public class playermovements : MonoBehaviour
             speed = 12f;
         }
 
-        if(Input.GetKey(KeyCode.LeftShift))
-        {
-
-            energyBar.instance.useStamina(5);
-        }
             
 
 
